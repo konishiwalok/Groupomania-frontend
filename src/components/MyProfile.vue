@@ -34,6 +34,7 @@
                   <label id="imageLabel" for="image" class="font-weight-bold"
                     >Modifier mon image</label
                   >
+                  
                   <input
                     type="file"
                     name="image"
