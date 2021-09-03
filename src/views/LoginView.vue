@@ -1,3 +1,4 @@
+//navbar.vue va etre exporte et utliser au login //
 <template>
   <div class="min-vh-100 d-flex flex-column justify-content-between">
     <Navbar />
@@ -19,3 +20,5 @@ export default {
   }
 }
 </script>
+
+
