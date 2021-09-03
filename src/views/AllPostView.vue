@@ -1,8 +1,11 @@
 <template>
+
+	
+
   <div class="min-vh-100 d-flex flex-column justify-content-between">
     <NavbarPost />
     <Jumbo />
-
+  
       <!-- ALERTS MESSAGES DEPENGING ON AXIOS REQUESTS -->
         <b-alert v-if="errorDeletePost" show dismissible variant="danger">Impossible de supprimé votre post. Veuillez contacter un administrateur"</b-alert>
         <b-alert v-if="confirmDeletePost" show dismissible variant="success">Post supprimé</b-alert>
@@ -14,9 +17,9 @@
 
     <CreatePostBtn />
     <Post v-for="post in posts" :key="post.id" >
-
       <!-- POST -->
       
+
       <template v-slot:Posts v-if="posts !== null">
         <div>
           <div class="col d-flex justify-content-between align-items-center p-0 semicua">
