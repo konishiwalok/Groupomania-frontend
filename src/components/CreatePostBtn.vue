@@ -45,6 +45,7 @@ export default {
     name: "createPostBtn",
     data() {
         return {
+            
             userId: parseInt(localStorage.getItem('userId')),
             pseudo: localStorage.getItem("pseudo"),
             content: "",
@@ -85,7 +86,7 @@ export default {
                     }
                 })
                 .then(() => {
-                    this.$router.push('/allpost');
+                    this.$router.go()
                 })
                 .catch(() => {
                     this.errorAlert = true

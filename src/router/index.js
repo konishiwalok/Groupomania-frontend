@@ -39,12 +39,7 @@ const routes = [{
         component: () =>
             import ('../views/AllPostView.vue')
     },
-    {
-        path: '/addpost',
-        name: 'AddPost',
-        component: () =>
-            import ('../views/AddPostView.vue')
-    },
+   
 ]
 
 const router = new VueRouter({

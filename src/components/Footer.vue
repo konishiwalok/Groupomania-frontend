@@ -53,10 +53,8 @@ export default {
 
 <style scoped>
 .borderopa{
-box-shadow: 1px 5px 42px 2px rgba(23,162,184,0.64);
--webkit-box-shadow: 1px 5px 42px 2px rgba(23,162,184,0.64);
--moz-box-shadow: 1px 5px 42px 2px rgba(23,162,184,0.64);
-border-radius:90px 20px 50px 20px;
+background-image: linear-gradient(to right, #17a2b8, #76acd9, #bcb4e0, #e9c2da, #ffd7d8);
+border-radius:20px 20px 20px 20px;
 
 }
 </style>

@@ -203,7 +203,7 @@ export default {
               password: this.password,
             })
             .then(() => {
-              alert("Compte créé avec succès");
+              alert("Félicitations vous venez de  créé votre avec succès");
               localStorage.setItem("pseudo", this.pseudo);
               this.$router.push("Login");
             })

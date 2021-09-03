@@ -195,19 +195,19 @@
               </form>
             </b-collapse>
             <hr class="line w-75" />
-           <!-- <b-link class="btn bg-info font-weight-bold px-2 " to="Addpost"
+            <b-link class="btn bg-info font-weight-bold px-2 " to="allpost"
               >Rédiger un post</b-link
-            >-->
+            >
           </div>
         </div>
         <div class="row">
           <div class="col-8 mx-auto my-5">
-          <!--  <b-link
+           <b-link
               v-if="this.user.isAdmin == 1"
               class="delete badge badge-light font-weight-bold py-1 mr-2"
               to="AllProfiles"
               >Consulter les profiles</b-link
-            >-->
+            >
             <!--delate user -->
             <b-buton
               v-b-modal.modal-center
@@ -450,7 +450,7 @@ export default {
   z-index: -1;
 }
 .bg-groupomania {
-  background-color: #ffd7d8;
+  background-color: #d1515a;
 }
 .delete {
   border: 1px solid #ffd7d8;

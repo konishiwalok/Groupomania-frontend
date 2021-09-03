@@ -10,7 +10,6 @@ export default {
     name: 'Jumbo',
 
 }
-
 </script>
 
 <style  scoped>
@@ -20,4 +19,3 @@ color:#17a2b8;
 }
 
 </style>
-<!--l4	<p class="h3 mt-4 font-weight-bold">{{user.pseudo}}</p>-->
