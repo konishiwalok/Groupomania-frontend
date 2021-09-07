@@ -2,21 +2,21 @@
 
 	
 
-  <div class="min-vh-100 d-flex flex-column justify-content-between">
+  <div class="min-vh-100 d-flex flex-column justify-content-between ">
     <NavbarPost />
     <Jumbo />
   
       <!-- ALERTS MESSAGES DEPENGING ON AXIOS REQUESTS -->
-        <b-alert v-if="errorDeletePost" show dismissible variant="danger">Impossible de supprimé votre post. Veuillez contacter un administrateur"</b-alert>
+        <b-alert v-if="errorDeletePost" show dismissible variant="danger">Impossible de supprimé votre post. veuillez ressayer ultérieurement </b-alert>
         <b-alert v-if="confirmDeletePost" show dismissible variant="success">Post supprimé</b-alert>
         <b-alert v-if="errorComPost" show dismissible variant="danger">Impossible de commenter</b-alert>
         <b-alert v-if="confirmComPost" show dismissible variant="success">Commentaire ajouté</b-alert>
-        <b-alert v-if="errorDeleteCom" show dismissible variant="danger">Impossible de supprimer votre commentaire. Veuillez contacter un administrateur"</b-alert>
+        <b-alert v-if="errorDeleteCom" show dismissible variant="danger">Impossible de supprimer votre commentaire. veuillez ressayer ultérieurement"</b-alert>
         <b-alert v-if="confirmDeleteCom" show dismissible variant="success">Commentaire supprimé</b-alert>
       <!-- ALERTS MESSAGES DEPENGING ON AXIOS REQUESTS -->
 
     <CreatePostBtn />
-    <Post v-for="post in posts" :key="post.id" >
+    <Post v-for="post in posts" :key="post.id"  >
       <!-- POST -->
       
 
@@ -45,7 +45,7 @@
               :key="comment.id"
               class="container-fluid"
           >
-            <div v-if="comments.postId == posts.id" class="row d-flex justify-content-between align-items-center comment-area py-1">
+            <div v-if="comments.postId == posts.id" class="row d-flex  justify-content-between align-items-center comment-area py-1">
                 <img :src="comment.User.imageUrl" class="imgComment align-self-start">
                 <span id="userNameComment" class="align-self-start p-1">{{ comment.User.pseudo }}</span>
                 <p class="col-8 text-left mb-0 pt-1  font-weight-bold">{{ comment.content }}</p>
@@ -57,14 +57,14 @@
 
       <!-- SLOT FOR A NEW COMMENT -->
       <template v-slot:EditCom>
-          <form v-on:submit.prevent="sendCom(post.id)" class="container-fluid mt-2">
+          <form v-on:submit.prevent="sendCom(post.id)" class="container-fluid mt-2 ">
             <div class="form-group row">
               <label class="sr-only" for="comment"></label>
               <b-form-textarea id="newComment" class="col-11 form-control-sm mx-auto" name="comment" type="text" v-model.trim="$v.newComment.$model" aria-label="Zone d'un commentaire" placeholder="Commenter" required></b-form-textarea>
               <div class="error" v-if="!$v.newComment.maxLength">Max. {{ $v.newComment.$params.maxLength.max }} letters</div>
             </div>
             <div>
-              <button class="btn btn-light rounded py-1 px-2 mt-2 mr-3" id="sendcom" type="submit" aria-label="Publication d'un commentaire">Commenter</button>
+              <button class="btn  btn-light rounded py-1 px-2 mt-2 mr-3" id="sendcom" type="submit" aria-label="Publication d'un commentaire">Commenter</button>
               <button v-if="userId == post.userId || currentUser.isAdmin == 1" class="btn btn-primary bg-danger border-white rounded py-1 px-3 mt-2" @click.prevent="deletePost(post.id)" id="delpost" type="submit" aria-label="Supprimer le post"><i class="fa fa-trash"></i></button>
             </div>
           </form>
@@ -266,6 +266,7 @@ background-color:#17a2b8;}
 border-radius:20px 50px 20px 50px;
 background-color:#282c34;
 color:#17a2b8;
+
 }
 </style>
 

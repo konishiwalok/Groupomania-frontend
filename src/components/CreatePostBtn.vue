@@ -3,8 +3,8 @@
             <div class="row mx-auto">
                 <div class="col-lg-8 mx-auto masespacio">
                     <div class="card my-3 bg-primary mx-auto ">
-                        <div class="card-header ">
-                            <h1 class="text-white"> Fais un commentaire </h1>
+                        <div class="card-header mimania ">
+                            <h1 class="e"> Fais un commentaire </h1>
                         </div>
                         <div>
                             <p class="text-white font-weight-bold"> {{ pseudo }}</p>
@@ -21,7 +21,7 @@
                                             <div class="error" v-if="!$v.content.maxLength">Max. {{ $v.content.$params.maxLength.max }} letters</div>
                                         </div>
                                         <div class="form-group mt-3">
-                                            <label id="imageLabel" for="image" class="btn btn-primary border-white text-white font-weight-bold mt-2">Ajouter une image</label>
+                                            <label id="imageLabel" for="image" class="btn btn-info border-white  font-weight-bold mt-2">Ajouter une image</label>
                                             <input type="file" name="image" id="image" ref="image" v-on:change="handleFileUpload()"/>
                                             <button class="btn btn-light font-weight-bold ml-3" type="submit">Envoyer</button>
                                         </div>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <b-alert v-if="errorAlert" show dismissible variant="danger">Une erreur est survenue</b-alert>
-            <b-alert v-if="blankPost" show dismissible variant="danger">C'est vide là, non ?</b-alert>
+            <b-alert v-if="blankPost" show dismissible variant="danger">C'est vide</b-alert>
         </div>
 </template>
 
@@ -110,6 +110,9 @@ export default {
    opacity: 0;
    position: absolute;
    z-index: -1;
+}
+.mimania{
+    background-color:#e18c93;
 }
 
 

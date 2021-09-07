@@ -8,18 +8,7 @@
 <script>
 export default {
     name: 'Jumbo',
-
-  data() {
-    return {
-      
-      userId: parseInt(localStorage.getItem("userId")),
-      pseudo: "",
-    
-    };
-  },
-
 }
-console.log(document.cookie)
 </script>
 
 <style  scoped>

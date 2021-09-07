@@ -7,8 +7,8 @@
             <h4 class="card-title "> 👌Tu peux nous joindre ici 😀</h4>
 
             <div class="template-demo">
-              <button
-                type="button"
+              <button 
+                type="button" 
                 class="btn btn-social-icon btn-outline-facebook"
               >
                 <i class="fa fa-facebook"></i>
