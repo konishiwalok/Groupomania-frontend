@@ -52,20 +52,7 @@
                     <div class="col mx-auto position-relative">
                       <label for="pseudo"></label>
                       <div class="d-flex justify-content-center input-group">
-                        <span class="icon position-absolute input-group-addon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="25"
-                            height="30"
-                            fill="currentColor"
-                            class="bi bi-person-fill"
-                            viewBox="0 0 16 16"
-                          >
-                            <path
-                              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-                            />
-                          </svg>
-                        </span>
+                      
                         <input
                           id="pseudo"
                           name="pseudo"
@@ -122,21 +109,7 @@
                     <div class="col mx-auto position-relative">
                       <label for="password"></label>
                       <div class="d-flex justify-content-center input-group">
-                        <span class="icon position-absolute input-group-addon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="25"
-                            height="30"
-                            fill="currentColor"
-                            class="bi bi-file-lock2-fill"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M7 6a1 1 0 0 1 2 0v1H7V6z" />
-                            <path
-                              d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-2 6v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V8.3c0-.627.46-1.058 1-1.224V6a2 2 0 1 1 4 0z"
-                            />
-                          </svg>
-                        </span>
+                  
                         <input
                           id="password"
                           name="password"
@@ -158,21 +131,7 @@
                     <div class="col mx-auto position-relative">
                       <label for="confirmPassword"></label>
                       <div class="d-flex justify-content-center input-group">
-                        <span class="icon position-absolute input-group-addon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="25"
-                            height="30"
-                            fill="currentColor"
-                            class="bi bi-file-lock2-fill"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M7 6a1 1 0 0 1 2 0v1H7V6z" />
-                            <path
-                              d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-2 6v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V8.3c0-.627.46-1.058 1-1.224V6a2 2 0 1 1 4 0z"
-                            />
-                          </svg>
-                        </span>
+
                         <input
                           id="confirmPassword"
                           name="confirmPassword"
@@ -246,7 +205,7 @@
         >Profil mis à jour</b-alert
       >
       <b-alert v-if="errorDelete" show dismissible variant="danger"
-        >Une erreur est survenue. Veuillez contacter un administrateur</b-alert
+        >Une erreur est survenue.Ressayez plus tard</b-alert
       >
       <b-alert v-if="differentConfirmPassword" show dismissible variant="danger"
         >Les mots de passe sont différents</b-alert

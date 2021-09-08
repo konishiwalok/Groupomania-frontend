@@ -15,10 +15,9 @@
         >
           <div class="col mx-auto position-relative">
             <label for="pseudo">Pseudo</label>
-               
+
             <div class="d-flex justify-content-center input-group">
-              <span class="icon position-absolute input-group-addon">
-              </span>
+              <span class="icon position-absolute input-group-addon"> </span>
               <input
                 id="pseudo"
                 name="pseudo"
@@ -39,10 +38,9 @@
         >
           <div class="col mx-auto position-relative ">
             <label for="email">Email</label>
-             
+
             <div class="d-flex justify-content-center input-group">
-              <span class="icon position-absolute input-group-addon">
-              </span>
+              <span class="icon position-absolute input-group-addon"> </span>
               <input
                 id="email"
                 name="email"
@@ -60,10 +58,9 @@
         >
           <div class="col mx-auto position-relative">
             <label for="password">Mot de passe</label>
-             
+
             <div class="d-flex justify-content-center input-group">
-              <span class="icon position-absolute input-group-addon">
-              </span>
+              <span class="icon position-absolute input-group-addon"> </span>
               <input
                 id="password"
                 name="password"
@@ -81,10 +78,9 @@
         <div class="form-group form-group-sm">
           <div class="col mx-auto position-relative">
             <label for="confirmPassword">Confirmation</label>
-              
+
             <div class="d-flex justify-content-center input-group">
-              <span class="icon position-absolute input-group-addon">
-              </span>
+              <span class="icon position-absolute input-group-addon"> </span>
               <input
                 id="confirmPassword"
                 name="confirmPassword"
@@ -96,7 +92,7 @@
             </div>
           </div>
         </div>
-        <button 
+        <button
           class="btn  btn-sm mt-3 bg-info"
           type="submit"
           @click.prevent="signup"
@@ -126,7 +122,7 @@
           >Les mots de passe sont différents</b-alert
         >
       </div>
-        <hr class="line w-80">
+      <hr class="line w-80" />
       <div class="">
         <button class="btn  btn-sm  bg-info" @click.prevent="goLogin">
           Connexion
@@ -203,7 +199,7 @@ export default {
               password: this.password,
             })
             .then(() => {
-              alert("Félicitations vous venez de  créé votre avec succès");
+              alert("Félicitations vous venez de  créé votre compte avec succès");
               localStorage.setItem("pseudo", this.pseudo);
               this.$router.push("Login");
             })
