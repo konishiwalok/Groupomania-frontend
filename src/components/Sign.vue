@@ -1,3 +1,4 @@
+<!--composant de signupVieuw-->
 <template>
   <div class="bg-primary pt-3 pb-5">
     <div class=" card col-8 col-lg-4 mx-auto bg-white py-4 ">
@@ -179,8 +180,8 @@ export default {
     signup() {
       this.blankFields = false;
       this.differentConfirmPassword = false;
-      this.alert = [0]; // reboot alerts before each try
-      this.$v.$touch(); // checks for errors
+      this.alert = [0]; // reboot alerte avant chaque essaie
+      this.$v.$touch(); // verifie les erreurs
 
       if (
         !this.email ||

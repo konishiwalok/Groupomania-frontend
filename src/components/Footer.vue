@@ -1,3 +1,4 @@
+<!-- composant qui se trouve sur toutes les pages -->
 <template>
   <div class="container-fluid bg-light font-weight-bold text-secondary  ">
     <footer class="d-flex flex-column justify-content-center  mt-5">

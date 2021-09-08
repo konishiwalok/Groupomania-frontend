@@ -1,3 +1,4 @@
+<!--composant de loginView-->
 <template>
   <div class="bg-primary pt-3 pb-5">
     <div class="card col-8 col-lg-4 mx-auto bg-white py-4 borderopa">
@@ -143,7 +144,7 @@ export default {
     },
 
     login() {
-      this.errorAlert = false; // reboot alert before each try
+      this.errorAlert = false; //alerte de redémarrage avant chaque essai
 
       axios
         .post("http://localhost:3000/api/users/login", {

@@ -1,3 +1,4 @@
+<!--composant de ProfileView -->
 <template>
   <div class="container-fluid  ">
     <div class="card col-8 mx-auto elborde jumbotron  ">
@@ -278,24 +279,24 @@ export default {
   methods: {
     handleFileUpload() {
       this.image = this.$refs.image.files[0];
-      this.user.imageUrl = URL.createObjectURL(this.image); // replace the user image by the one uploaded
+      this.user.imageUrl = URL.createObjectURL(this.image); //remplace l'image de l'utilisateur par celle téléchargée
     },
 
     updateProfile() {
       this.$v.$touch();
 
-      this.errorInputs = false; // reboot error alets before each try
+      this.errorInputs = false; // l'erreur de redémarrage est signalée avant chaque essai
       this.errorDelete = false;
       this.differentConfirmPassword = false;
 
-      // Checks if password input is filled
+      // Vérifie si la saisie du mot de passe est remplie
       if (this.password !== null) {
-        // Checks if both matches
+        // Vérifie si les deux correspondent
         if (this.password !== this.confirmPassword) {
           // Throw error if not
           this.differentConfirmPassword = true;
 
-          // Send the request if OK
+          // Envoie la demande si OK
         } else {
           const formData = new FormData();
 
@@ -329,18 +330,18 @@ export default {
             });
         }
 
-        // If password input is not filled,
+       // Si la saisie du mot de passe n'est pas renseignée,
       } else {
-        // send the request with other inputs
+        //  envoyer la requête avec d'autres entrées
 
         const formData = new FormData();
-        // If there is an image uploaded :
+        // S'il y a une image téléchargée:
         if (this.image) {
           formData.append("image", this.image);
           formData.append("userId", this.userId);
           formData.append("pseudo", this.pseudo);
           formData.append("email", this.email);
-          // if not :
+          // sinon :
         } else {
           formData.append("userId", this.userId);
           formData.append("pseudo", this.pseudo);

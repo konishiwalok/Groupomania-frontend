@@ -1,4 +1,4 @@
-//navbar.vue va etre exporte et utliser au login //
+<!--importantions des composants pour page de connection-->
 <template>
   <div class="min-vh-100 d-flex flex-column justify-content-between">
     <Navbar />

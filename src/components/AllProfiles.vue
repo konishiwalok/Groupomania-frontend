@@ -1,3 +1,4 @@
+<!-- composant de AllProfilesView-->
 <template>
     <div class="container-fluid">
         <div class="row mx-auto">

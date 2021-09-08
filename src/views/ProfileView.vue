@@ -1,3 +1,4 @@
+<!--importantions des composants pour page de profil d'utilisateur-->
 <template>
   <div class="min-vh-100 d-flex flex-column justify-content-between bg-primary">
     <NavbarPost />

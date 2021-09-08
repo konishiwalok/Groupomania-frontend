@@ -1,4 +1,4 @@
-/*html*/
+<!--importantions des composants pour page de signup -->
 <template>
   <div class="min-vh-100 d-flex flex-column justify-content-between ">
     <Navbar />

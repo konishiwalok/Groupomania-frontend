@@ -1,3 +1,4 @@
+<!--composant navbar signup/login-->
 <template>
     <div class="Navbar">
         <b-navbar toggleable="lg" type="dark" variant="info">

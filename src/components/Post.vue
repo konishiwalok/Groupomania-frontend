@@ -1,3 +1,4 @@
+<!--composant de Allpostview-->
 <template>
     <div class="container-fluid ">
         <div class="row mx-auto mb-5">

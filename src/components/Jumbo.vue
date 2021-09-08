@@ -1,3 +1,4 @@
+<!-- composant de AllPostView-->
 <template>
     <div class="jumbotron p-2">
 		<h1 class="h2">Bienvenue sur Groupomania! </h1>

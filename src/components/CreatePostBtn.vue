@@ -1,3 +1,4 @@
+<!-- composant de AllPostView-->
 <template>
         <div class="col-lg-7 offset-lg-3 mx-auto">
             <div class="row mx-auto">
@@ -66,7 +67,7 @@ export default {
 
             handleFileUpload(){
                 this.image = this.$refs.image.files[0];
-                this.uploadUrl = URL.createObjectURL(this.image) // create an url to preview it before uploading
+                this.uploadUrl = URL.createObjectURL(this.image) // créer une URL pour le prévisualiser avant de le télécharger
 
             },
             createPost() {

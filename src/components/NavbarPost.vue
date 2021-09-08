@@ -1,3 +1,4 @@
+<!--composant navbar principal-->
 <template>
     <div class="container-fluid px-0 sticky">
         <nav class="Navbar ">
@@ -20,7 +21,7 @@
 
 <script>
 export default {
-    // Check if the current page is allpost and hide the "Acceuil" button now useless
+    // Vérifie si la page actuelle est allpost et masque le bouton "Accueil" désormais inutile
     created: function() {
     if (window.location.pathname === '/allpost') {
             this.isAllpost = false

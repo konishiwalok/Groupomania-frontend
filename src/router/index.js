@@ -1,3 +1,5 @@
+//on importations des librairies et routes 
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -43,3 +45,5 @@ const router = new VueRouter({
 })
 
 export default router
+
+//router est exporter a main.js

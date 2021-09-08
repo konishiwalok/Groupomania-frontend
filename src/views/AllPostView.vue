@@ -1,23 +1,22 @@
-<template>
-
-	
+<!-- LA PAGE D'ACCUEIL  + importation Post.vue = slot = LE POST -COMMENTS -NEW COMMENT + jumbo + btnPost-->
 
   <div class="min-vh-100 d-flex flex-column justify-content-between ">
     <NavbarPost />
     <Jumbo />
   
-      <!-- ALERTS MESSAGES DEPENGING ON AXIOS REQUESTS -->
+      <!-- MESSAGES D'ALERTES QUI DEPEND DES REQUESTES AXIOS -->
         <b-alert v-if="errorDeletePost" show dismissible variant="danger">Impossible de supprimé votre post. veuillez ressayer ultérieurement </b-alert>
         <b-alert v-if="confirmDeletePost" show dismissible variant="success">Post supprimé</b-alert>
         <b-alert v-if="errorComPost" show dismissible variant="danger">Impossible de commenter</b-alert>
         <b-alert v-if="confirmComPost" show dismissible variant="success">Commentaire ajouté</b-alert>
         <b-alert v-if="errorDeleteCom" show dismissible variant="danger">Impossible de supprimer votre commentaire. veuillez ressayer ultérieurement"</b-alert>
         <b-alert v-if="confirmDeleteCom" show dismissible variant="success">Commentaire supprimé</b-alert>
-      <!-- ALERTS MESSAGES DEPENGING ON AXIOS REQUESTS -->
+     
 
     <CreatePostBtn />
     <Post v-for="post in posts" :key="post.id"  >
-      <!-- POST -->
+
+      <!--SLOTS POST -->
       
 
       <template v-slot:Posts v-if="posts !== null">
@@ -39,7 +38,7 @@
         </div>
       </template>
 
-      <!-- ITS COMMENTS -->
+      <!-- SLOT COMMENTS -->
       <template v-slot:Comments v-if="comments !== null">
           <div v-for="(comment) in comments.filter((comment) => {return comment.postId == post.id })"
               :key="comment.id"
@@ -55,7 +54,7 @@
           </div>
       </template>
 
-      <!-- SLOT FOR A NEW COMMENT -->
+      <!-- SLOT POUR UN NOUVEL COMMENTAIRE  EDITCOM-->
       <template v-slot:EditCom>
           <form v-on:submit.prevent="sendCom(post.id)" class="container-fluid mt-2 ">
             <div class="form-group row">
@@ -108,7 +107,7 @@ export default {
       },
       newComment: "",
 
-      // ALERTS MESSAGES
+      // MESSAGES D'ALERTE
       errorDeletePost: false,
       confirmDeletePost: false,
       errorDeleteCom: false,
